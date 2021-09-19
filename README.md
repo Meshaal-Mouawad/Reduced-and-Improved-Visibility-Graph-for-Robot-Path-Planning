@@ -1,12 +1,20 @@
-# Reduced-and-Improved-Visibility-Graph-for-Robot-Path-Planning
-# Objectives: 
-The objective of the project is to: 
+# Running the code
 
-1- get familiar with Visibility Graph (VG) technique-based robot global path planning. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% ECE8743 Advanced Robotics
+% Visibility Graph based robot global path planning for static obstacles
+% Evloved from Aditya Jain's codes
+%
+% Configued in Environment 1/2/3
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 
-2- apply the Visibility Graph technique of robot global path planning in workspace with a variety of obstacles. 
-
-3- improve this Visibility Graph technique of robot path planning and attempt creation of Reduced Visibility Graph (RVG) algorithm. 
-
-4- revise the Visibility Graph learned in the classroom to Tangent Graph-based (TG) path planning (optional).
-
+Note:
+- other files are helper files for the above main scripts
+- To switch between the three environment configurations, comment the others in visible_graph.m (well documented and commented code)
+- ECE8743_Visible_graph_Environment_1.m for Environment 1
+- ECE8743_Visible_graph_Environment_2.m for Environment 2
+- ECE8743_Visible_graph_Environment_3.m for Environment 3
+- These three environments of files can be revsied from ECE8743_Visible_graph.m
