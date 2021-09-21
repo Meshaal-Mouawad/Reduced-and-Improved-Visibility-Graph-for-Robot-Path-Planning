@@ -45,7 +45,7 @@ figure
 
 
 %%% 3rd Config
-rectangle('Position',[20 10 20 20], 'FaceColor',[0 .5 .5])
+rectangle('Position',[20 10 20 20], 'FaceColor',[0 .5 .5])% creates a rectangle  [x y w h]
 axis([0 100 0 100])
 axis square
 
