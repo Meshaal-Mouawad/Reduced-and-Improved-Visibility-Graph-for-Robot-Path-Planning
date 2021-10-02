@@ -23,32 +23,10 @@ n = 2;             % no. of obstacles
 %% Defining the grid
 figure
 
-%%% 1st Config %%%%
-% rectangle('Position',[20 10 40 30], 'FaceColor',[0 .5 .5])
-% axis([0 100 0 100])
-% axis square
-% 
-% hold on
-% rectangle('Position',[50 60 20 20], 'FaceColor',[0 .5 .5])
-%%%%%%%%%%%%%%%%%%%
-
-
-%%% 2nd Config
-% rectangle('Position',[20 10 40 20], 'FaceColor',[0 .5 .5])
-% axis([0 100 0 100])
-% axis square
-% 
-% rectangle('Position',[70 10 20 40], 'FaceColor',[0 .5 .5])
-% rectangle('Position',[10 40 40 20], 'FaceColor',[0 .5 .5])
-% rectangle('Position',[20 70 60 20], 'FaceColor',[0 .5 .5])
-%%%%%%%%%%%%%
-
-
 %%% 3rd Config
 rectangle('Position',[20 10 20 20], 'FaceColor',[0 .5 .5])% creates a rectangle  [x y w h]
 axis([0 100 0 100])
 axis square
-
 rectangle('Position',[70 10 20 20], 'FaceColor',[0 .5 .5])
 rectangle('Position',[10 40 20 20], 'FaceColor',[0 .5 .5])
 rectangle('Position',[20 70 20 20], 'FaceColor',[0 .5 .5])
@@ -57,9 +35,6 @@ rectangle('Position',[40 40 35 20], 'FaceColor',[0 .5 .5])
 rectangle('Position',[10 70 5 20], 'FaceColor',[0 .5 .5])
 rectangle('Position',[50 65 20 25], 'FaceColor',[0 .5 .5])
 rectangle('Position',[80 35 15 40], 'FaceColor',[0 .5 .5])
-%%%%%%%%%%%%%
-
-
 
 % Plotting start position
 circles(start(1), start(2),2, 'facecolor','green')
@@ -68,16 +43,6 @@ circles(start(1), start(2),2, 'facecolor','green')
 circles(goal(1), goal(2),2, 'facecolor','yellow')
 
 %% initialising the hash map
-
-%%% 1st Config
-% keys = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};
-% values = {start, [20,10], [20,40], [60,40], [60,10], [50,60], [50,80], [70,80], [70,60], goal};
-%%%%%%%%%%%%%%%%%
-
-%%% 2nd Config
-% keys = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r'};
-% values = {start, [20,10], [20,30], [60,30], [60,10], [10,40], [10,60], [50,60], [50,40], [70,10], [70,50], [90,50], [90,10], [20,70], [20,90], [80,90], [80,70], goal};
-%%%%%%%%%%%%%%%%%
 
 %%% 3rd Config
 keys = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'aa', 'ab', 'ac', 'ad', 'ae', 'af', 'ag', 'ah', 'ai', 'aj', 'ak', 'al'};
