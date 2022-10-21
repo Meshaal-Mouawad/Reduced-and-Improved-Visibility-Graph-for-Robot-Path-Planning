@@ -73,10 +73,3 @@ the roadmap.[8, 9]
 
 **Shortest path in the graph is calculated using BFS**
 
-**2/ Please first draw its flowchart to describe this VG algorithm and then
-create its pseudocode to**
-
-**describe the algorithm including how to find the shortest path. It’s better to
-use notations to make**
-
-** it will be completed soon**
