@@ -1,75 +1,43 @@
-**Reduced and Improved Visibility Graph for Robot Path Planning**
-Meshaal. Mouawad, *Department of Electrical and Computer Engineering, Mississippi State University
+# Two-Trace Cost Reconstruction for One-Time Roadmap Validation Decisions
 
-# Project Objectives
+**Meshaal Mouawad** · Mississippi State University  
+**Journal:** Journal of Combinatorial Optimization (Springer Nature)  
+**Manuscript:** JOCO-D-26-01323 · Submitted 21 November 2026  
+**Manuscript release:** V22.8 (19 pages)
 
-The objective of the project is to
+## Research question
 
--   Get familiar with Visibility Graph (VG) technique-based robot global path
-    planning.
+For a sequence of start–goal queries on a fixed candidate roadmap, can all one-time persistent-edge completion decisions be evaluated exactly using only the permanently lazy and upfront-completed executions?
 
--   Apply the Visibility Graph technique of robot global path planning in
-    workspace with a variety of obstacles.
+The manuscript proves an exact two-trace reconstruction of every completion cost under durable edge checks and history-independent completed-query service. A running prefix minimum identifies the lowest modeled cost retrospectively in linear time in the number of requests.
 
--   Improve this Visibility Graph technique of robot path planning and attempt
-    creation of Reduced Visibility Graph (RVG) algorithm.
+## Evidence
 
-# Project Requirements
-understanding the basic of robotics and  global path planning.
+- 216 workloads × 40 start–goal queries.
+- Two engines: restarted A* and query-local LPA*.
+- 17,280 directly executed completion schedules.
+- 2,833,920 service-field comparisons and 1,062,720 coefficient comparisons.
+- Experimental code and input evidence retained with frozen releases.
 
-# Running the code
-Note:
-- other files are helper files for the above main scripts
-- To switch between the three environment configurations, comment the others in visible_graph.m (well documented and commented code)
-- ECE8743_Visible_graph_Environment_1.m for Environment 1
-- ECE8743_Visible_graph_Environment_2.m for Environment 2
-- ECE8743_Visible_graph_Environment_3.m for Environment 3
-- These three environments of files can be revsied from ECE8743_Visible_graph.m
+## Current manuscript
 
+- [JOCO V22.8 manuscript (PDF)](Manuscript/JOCO_Manuscript_v22_8.pdf)
+- [JOCO V22.8 LaTeX source, figures, and build instructions](Manuscript/JOCO_LaTeX_Source_v22_8.zip)
 
-# Introduction
+## Research data and reproducibility
 
-VISIBILITY graph (VG) is one of the earliest motion planning algorithms and
-notable as it is a **complete, optimal** algorithm for polygonal obstacles.
-Visibility graph is a roadmap approach graph of intervisible locations,
-typically for a set of points and obstacles in the *Euclidean plane*. Each
-*vertex* in the graph represents a point location, whereas each *edge*
-represents a *visible connection* between them. That is, if the line segment
-connecting two vertices (locations) does not pass through any obstacle, an
-*edge* is created between them in the graph. When the set of locations lies in a
-line, this can be addressed as an ordered series [1]
+**Harvard Dataverse:** [Replication Data for Two-Trace Cost Reconstruction for One-Time Roadmap Validation Decisions](https://doi.org/10.7910/DVN/TICP0N)
 
-The idea to construct visibility graph can be summarized in three steps:
+- [ESM_1.zip](Evidence/ESM_1.zip) — original ROBOTICA-PQV-v10 study.
+- [ESM_2.zip](Evidence/ESM_2.zip) — JIRS-TWO-TRACE-v1.1 extension and verification.
+- [Historical ESM_2 archive](Evidence/ESM_2_v1_original_provenance.zip) — preserved for provenance.
 
-1.  The *vertices* are the *start*, *destination*, and all *obstacle vertices*.
+For detailed reproduction procedures and archived verification, see the materials inside the ESM archives and [historical verification reports](Archive/JIRS/Verification/).
 
-2.  The *edges* consist of all possible *collision-free line segments* and
-    *obstacle edges*.
+## Project history
 
-3.  The solution paths will pass directly through obstacle corners as shown in
-    Fig. 1.
-# The Roadmap Approach
+The original visibility-graph project started in 2021. The [historical MATLAB code](Code/) and [original project document](Archive/Original_2021/) remain available. Older JIRS submission versions are preserved in [Archive/JIRS/Manuscript/](Archive/JIRS/Manuscript/); GitHub commit history also remains intact.
 
-This approach is dependent upon the concepts of configuration space and a
-continuous path. A set of one-dimensional curves, each of which connect two
-nodes of different polygonal obstacles, lie in the free space and represent a
-roadmap *R* [3]. That is, all line segments that connect a vertex of one
-obstacle to a vertex of another without entering the interior of any polygonal
-obstacles are drawn [4]. This set of paths is called the roadmap [5]. If a
-continuous path can be found in the free space of *R*, the initial and goal
-points are then connected to this path to arrive at the final solution, a free
-path. If more than one continuous path can be found and the number of nodes in
-the graph is relatively small, Dijkstra's shortest path algorithm is often used
-to find the best path [6].
+## License and attribution
 
-There are various types of roadmaps, one of the earliest path planning methods
-was the visibility graph method, explored by NJ Nilsson as early as 1969. A
-visibility graph is shown in Fig. 1. [7]. The shaded areas represent obstacles.
-The solid lines are the edges of the graph and connect the vertices of the
-obstacles. The dotted lines connect the beginning and end configurations with
-the roadmap.[8, 9]
-
-# Visibility Graph Algorithms Procedure
-
-**Shortest path in the graph is calculated using BFS**
-
+See [LICENSE](LICENSE) and source-file attribution. Historical third-party contributions retain their original notices.
